@@ -15,7 +15,18 @@ header {
 }
 
 
-/* position-absolute top-0 start-50 translate-middle-x */
+.card-custom {
+    .card-date{
+        font-family: ‘Sometype Mono’, ‘monospace’;
+        color: grey;
+    }
+
+    .card-title {
+        font-family: "Edu TAS Beginner", cursive;
+        font-weight: 700;
+        text-transform:uppercase
+    }
+}
 
 
 
