@@ -6,7 +6,7 @@ const blogEl = document.querySelector('.blog')
 function markupCardGenerator(pic) {
 
     const markup =
-    `<div class="col-4">
+    `<div class="co d-flex justify-content-center">
         <div class="card-custom bg-body m-5 position-relative" style="width:18rem;">
             <img class="pin position-absolute top-0 start-50 translate-middle" src="assets/img/pin.svg" style="width:2rem;" alt="">
 

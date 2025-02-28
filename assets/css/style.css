@@ -33,6 +33,40 @@ header {
     }
 }
 
+/* Media query for medium screen */
+@media screen and (max-width: 992px) {
+
+    header {
+        .title{
+            font-size: 4rem;
+        }
+    }
+
+
+}
+
+
+
+
+/* Media query for small screen */
+@media screen and (max-width: 768px) {
+
+    header {
+        .title{
+            font-size: 2.5rem;
+        }
+    }
+
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+
+
 
 
 
