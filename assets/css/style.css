@@ -17,7 +17,7 @@ header {
 
 .card-custom {
     .card-date{
-        font-family: ‘Sometype Mono’, ‘monospace’;
+        font-family: "Sometype Mono", monospace;
         color: grey;
     }
 
