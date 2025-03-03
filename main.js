@@ -8,7 +8,7 @@ function markupCardGenerator(pic) {
     const markup =
     `<div class="co d-flex justify-content-center">
         <div class="card-custom bg-body mt-4 position-relative" >
-            <img class="pin position-absolute top-0 start-50 translate-middle" src="assets/img/pin.svg" style="width:2rem;" alt="">
+            <img class="pin position-absolute top-0 start-50 translate-middle" src="./assets/img/pin.svg" style="width:2rem;" alt="">
 
             <img src=${pic.url} class="card-img-top p-3" alt="...">
             <div class="card-body">
