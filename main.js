@@ -67,6 +67,14 @@ function cardDisplayer(res) {
 
     }
 
+    /* const cardEl = document.querySelector('.card-custom')
+    imgCardEl.addEventListener('onmouseenter', function() {
+
+
+        cardEl.classList.add()
+
+    }) */
+
 }
 
 

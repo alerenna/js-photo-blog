@@ -5,6 +5,16 @@
     margin: 0;
 }
 
+.card-custom:hover {
+
+    transform: scale(1.05);
+    transform: rotate(10deg);
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -32,10 +42,15 @@ header {
 }
 
 .card-custom {
+
+    background-color: black;
     .card-date{
         font-family: "Sometype Mono", monospace;
         color: grey;
+        transition: transform .2s
     }
+
+
 
     .card-title {
         font-family: "Edu TAS Beginner", cursive;
