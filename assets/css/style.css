@@ -12,6 +12,7 @@
     background-color: black;
     z-index: 1;
     cursor: pointer;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
 
 }
 
