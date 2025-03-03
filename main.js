@@ -2,6 +2,7 @@
 const blogEl = document.querySelector('.blog')
 const overlayEl = document.querySelector('.overlay-container')
 const closeButtonEl = document.querySelector('.close')
+const selectedImageEl = document.querySelector('.selected-image')
 
 
 //Functions
@@ -9,7 +10,7 @@ const closeButtonEl = document.querySelector('.close')
 function markupCardGenerator(pic) {
 
     const markup =
-    `<div class="card-col col d-flex justify-content-center">
+        `<div class="card-col col d-flex justify-content-center">
         <div class="card-custom bg-body mt-4 position-relative" >
             <img class="pin position-absolute top-0 start-50 translate-middle" src="./assets/img/pin.svg" style="width:2rem;" alt="">
 
@@ -27,33 +28,45 @@ function markupCardGenerator(pic) {
 }
 
 //create a function insert the card in the DOM
-function cardDisplayer(res){
+function cardDisplayer(res) {
     let pictureList = res.data
 
-        pictureList.forEach(pic => {
-            console.log(pic);
+    pictureList.forEach(pic => {
+        console.log(pic);
 
-            const markup = markupCardGenerator(pic)
+        const markup = markupCardGenerator(pic)
 
-            blogEl.insertAdjacentHTML('beforeend', markup)
-            
-        }); 
+        blogEl.insertAdjacentHTML('beforeend', markup)
 
-    const imgCardEl = document.querySelectorAll('.card-img-top')                
+    });
+
+
+    const imgCardEl = document.querySelectorAll('.card-img-top')
     console.log(imgCardEl);
 
     for (let i = 0; i < imgCardEl.length; i++) {
         const thisImage = imgCardEl[i];
 
-        thisImage.addEventListener('click', function() {
+        console.log(thisImage);
+
+        thisImage.addEventListener('click', function () {
+            selectedImageEl.length = 0
 
             overlayEl.classList.remove('d-none')
-        
+            //Seleziono l'immagine che è stata cliccata e la inserisco nel DOM
+            pictureList.forEach(pic => {
+                console.log(pic);
+                //Prendo l'url dell'immagine cliccata e stampo quell'immagine
+                if (thisImage.src === pic.url) {
+                    selectedImageEl.innerHTML = `<img src=${pic.url} style="max-width: 65%" alt="Selected image">`
+                }
+            });
+
             console.log('CLICK');
         })
-        
+
     }
-        
+
 }
 
 
@@ -69,7 +82,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
 
 //add event listener on click on button close to close overlay (add d-none class to overlay div)
-closeButtonEl.addEventListener('click', function() {
+closeButtonEl.addEventListener('click', function () {
 
     overlayEl.classList.add('d-none')
 
