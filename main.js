@@ -4,7 +4,6 @@ const overlayEl = document.querySelector('.overlay-container')
 const closeButtonEl = document.querySelector('.close')
 const selectedImageEl = document.querySelector('.selected-image')
 
-
 //Functions
 // create a markup generator function
 function markupCardGenerator(pic) {
@@ -67,14 +66,6 @@ function cardDisplayer(res) {
 
     }
 
-    /* const cardEl = document.querySelector('.card-custom')
-    imgCardEl.addEventListener('onmouseenter', function() {
-
-
-        cardEl.classList.add()
-
-    }) */
-
 }
 
 
@@ -96,14 +87,6 @@ closeButtonEl.addEventListener('click', function () {
 
     console.log('CLICK CLOSE');
 })
-
-
-//Quando l'immagine viene cliccata appare la stessa immagine in overlay
-
-//Recupero l'immagine corrispondente con 
-
-//
-
 
 
 
